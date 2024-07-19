@@ -9,19 +9,19 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <title>Ticket Qr View</title>
     </head>
-    <body style="background: #F0E5D3;">
+    <body style="background: #f8f9fa">
         <div class="d-flex justify-content-between align-items-center" style="height: 100vh;">
             <div></div>
             <div>
                 <div class="p-0 m-0 my-2 d-flex justify-content-between">
                     <div>
                         <form action="LoadHomePage" method="post">
-                            <button class="btn btn-success">Go Back</button>
+                            <button class="btn btn-primary">Dashboard</button>
                         </form>
                     </div>
                     <div>
                         <form action="logOutServlet" method="post">
-                            <button class="btn btn-outline-primary" type="submit">LOG OUT</button>
+                            <button class="btn btn-outline-primary" type="submit">Log Out</button>
                         </form>
                     </div>
                 </div>
@@ -33,7 +33,17 @@
                     </div>
                 </div>
                 <h2 class="p-0 m-0 mt-2 px-2 text-center">Hello, <%= username %>!</h2>
-                <p class="p-0 m-0 text-center form-text px-5">This is your Token to Enjoy Event!</p>
+                <p class="p-0 m-0 text-center form-text px-5">Thanks You!</p>
+                  <p class="p-0 m-0 text-center form-text px-5">This is your trusted payment network</p>
+                  
+                     <div class="p-0 m-0 my-2 d-flex justify-content-center">
+                    <div>
+                        <form action="" method="post">
+                            <button class="btn btn-success">Download</button>
+                        </form>
+                    </div>
+                    </div>
+                  
                 <% } else { %>
                 <div class="form-control" style="width: 400px; height: 400px; border-radius: 10px; border: none;">
                     <div>

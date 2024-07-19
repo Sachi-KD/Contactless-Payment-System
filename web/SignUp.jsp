@@ -110,7 +110,7 @@ button.btn{
              <div class="card-title">
                <img src="https://res.cloudinary.com/emygeek/image/upload/v1534678336/puzzle_1_gh259m.svg" class="img-fluid logo">
              <h2>Sign up for reward</h2>
-               <p>We are a small team of creatives who love to share <strong>design tips</strong>. Register for full access.</p>
+               <p>"Secure and seamless transactions are the backbone of any, ensuring trust and convenience" Register for full access.</p>
            </div>
            <div class="card-body">
 
@@ -123,7 +123,7 @@ button.btn{
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="name-addon"><i class="far fa-user"></i></span>
                     </div>
-                    <input type="text" name="username"  class="form-control" placeholder="Username" aria-label="Name" aria-describedby="name-addon">
+                    <input type="text" name="username" style="border-radius: 15px;"  class="form-control" placeholder="Username" aria-label="Name" aria-describedby="name-addon">
                   </div>
                </div>
 
@@ -134,7 +134,7 @@ button.btn{
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="password-addon"><i class="fas fa-fingerprint"></i></span>
                     </div>
-                    <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                    <input type="password" name="password" style="border-radius: 15px;" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
                   </div>
                </div>
 
@@ -144,7 +144,7 @@ button.btn{
                    <div class="input-group-prepend">
                      <span class="input-group-text" id="password-addon"><i class="fas fa-fingerprint"></i></span>
                    </div>
-                   <input type="password" name="confpassword"  class="form-control" placeholder="Confirm Password" aria-label="Password" aria-describedby="password-addon">
+                   <input type="password" name="confpassword" style="border-radius: 15px;" class="form-control" placeholder="Confirm Password" aria-label="Password" aria-describedby="password-addon">
                  </div>
               </div>
 
@@ -156,7 +156,7 @@ button.btn{
 
 
                <div class="form-group text-center">
-                <button type="submit" class="btn btn-secondary">Register</button>
+                <button type="submit" class="btn btn-secondary" style="border-radius: 15px;">Register</button>
                </div>
 
                <p class="p-0 m-0 mt-3 form-text text-center px-5">If you have an already exit account, you can <a href="index.jsp">Sign in now.</a></p>

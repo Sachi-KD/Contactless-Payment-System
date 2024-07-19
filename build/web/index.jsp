@@ -342,9 +342,10 @@ width: 90%;
                                 <span class="txt1 p-b-9">
                                     Don’t have an account?
                                 </span>
-                                <a href="SignUp.jsp" class="txt3">
-                                    Sign up now
-                                </a>
+                               <a href="SignUp.jsp" class="txt3">
+                                    <h6 style="color: blue;"> Sign up now </h6>
+                               </a>
+
                             </div>
                         </form>
                     </div>

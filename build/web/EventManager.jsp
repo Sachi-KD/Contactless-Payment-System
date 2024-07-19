@@ -428,11 +428,7 @@ body{
       </div>
     </nav>
     
-    <div class="user-welcome">
-      <p><span>Welcome Back,</span> Username</p>
-      <p>Registered on, Date</p>
-    </div>
-    
+  
     <!-- Start payment -->
     
     <div class="payment">
