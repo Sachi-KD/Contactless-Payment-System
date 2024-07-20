@@ -29,17 +29,20 @@
                 <% if (username != null) { %>
                 <div class="form-control" style="width: 400px; height: 400px; border-radius: 10px; border: none;">
                     <div>
-                        <img src="${pageContext.request.contextPath}/assets/QrImage/JD.png" alt="alt" class="img-fluid"/>
+                        <img src="${pageContext.request.contextPath}/assets/QrImage/JD.png"  alt="alt" class="img-fluid"/>
                     </div>
                 </div>
-                <h2 class="p-0 m-0 mt-2 px-2 text-center">Hello, <%= username %>!</h2>
-                <p class="p-0 m-0 text-center form-text px-5">Thanks You!</p>
-                  <p class="p-0 m-0 text-center form-text px-5">This is your trusted payment network</p>
+                <h2 class="p-0 m-0 mt-2 px-2 text-center">Payment Approved!</h2>
+                    <div class="text-center">
+                  <h6>QR sent to client</h6>
+                  </div>
+                       <p class="p-0 m-0 text-center form-text px-5">This is your trusted payment network</p>
+
                   
                      <div class="p-0 m-0 my-2 d-flex justify-content-center">
                     <div>
                         <form action="" method="post">
-                            <button class="btn btn-success">Download</button>
+                            <a href="${pageContext.request.contextPath}/assets/QrImage/JD.png" class="btn btn-success">Download</a>
                         </form>
                     </div>
                     </div>

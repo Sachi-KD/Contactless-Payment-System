@@ -36,16 +36,17 @@ public class EventHandle extends Event{
                 LastIntId = res.getInt(1);
             }
             
-            prepair = conn.con.prepareStatement("INSERT INTO event VALUES(?,?,?,?,?);");
+            prepair = conn.con.prepareStatement("INSERT INTO event VALUES(?,?,?,?,?,?);");
             if (LastIntId == 0) {
                 prepair.setInt(1, 1);
             } else {
                 prepair.setInt(1, LastIntId + 1);
             }
-            prepair.setString(2, getEventName());
-            prepair.setString(3, getEventDescription());
-            prepair.setFloat(4, getEventPrice());
-            prepair.setTimestamp(5, Timestamp.valueOf(getEventDateTime()));
+            prepair.setString(2, getClientName());
+            prepair.setString(3, getEventName());
+            prepair.setString(4, getEventDescription());
+            prepair.setFloat(5, getEventPrice());
+            prepair.setTimestamp(6, Timestamp.valueOf(getEventDateTime()));
 
             int i = prepair.executeUpdate();
             System.out.println("Recode Success");
@@ -66,8 +67,8 @@ public class EventHandle extends Event{
             ResultSet res = state.executeQuery("SELECT * FROM event");
             
             while(res.next()){
-                Timestamp timestamp = res.getTimestamp(5);
-                events.add(new EventList(res.getInt(1), res.getString(2), res.getString(3), res.getFloat(4), timestamp.toLocalDateTime()));
+                Timestamp timestamp = res.getTimestamp(6);
+                events.add(new EventList(res.getInt(1),res.getString(3), res.getString(2), res.getString(4), res.getFloat(5), timestamp.toLocalDateTime()));
             }
             
             res.close();

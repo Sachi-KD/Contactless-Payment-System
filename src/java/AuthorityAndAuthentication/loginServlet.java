@@ -126,21 +126,15 @@ public class loginServlet extends HttpServlet {
                 response.addCookie(usernameCookie);
                 response.addCookie(usernameCookie1);
 
-                /*ServletContext context = getServletContext();
-                String filePath = context.getRealPath("/assets/QrImage/JD.png");
-
-                File file = new File(filePath);
-
-                if (file.exists()) {
-                    // File exists, you can proceed with your logic here
-                    ops.imageUpload(username, filePath);
-                } else {
-                    // File does not exist, handle this case
-                    System.out.println("File not found: " + filePath);
-                }*/
-                if (Password == 2) {
+           
+                
+                
+                if (Password == 5)
+                {
                     response.sendRedirect("EventManager.jsp");
-                } else if (Password == 5) {
+                } 
+                else if (Password == 2) 
+                {
 
                     EventHandle eve = new EventHandle();
                     eve.AddEventList();

@@ -79,6 +79,7 @@ public class EventCreateServlet extends HttpServlet {
         }
         else{
             EventHandle eve = new EventHandle();
+            eve.setClientName(request.getParameter("clientname"));
             eve.setEventName(request.getParameter("eveName"));
             eve.setEventDescription(request.getParameter("eveDes"));
             eve.setEventPrice(Float.parseFloat(request.getParameter("evePri")));

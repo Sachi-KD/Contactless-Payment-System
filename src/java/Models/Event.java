@@ -14,6 +14,7 @@ import java.time.format.DateTimeFormatter;
  */
 public class Event {
     private int eveId;
+    private String ClientName;
     private String EventName;
     private String EventDescription;
     private float EventPrice;
@@ -25,6 +26,14 @@ public class Event {
 
     public void setEveId(int eveId) {
         this.eveId = eveId;
+    }
+    
+    public String getClientName() {
+        return ClientName;
+    }
+
+    public void setClientName(String ClientName) {
+        this.ClientName = ClientName;
     }
     
     public String getEventName() {

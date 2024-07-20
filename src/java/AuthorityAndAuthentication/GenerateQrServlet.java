@@ -77,25 +77,28 @@ public class GenerateQrServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String EveId = request.getParameter("eventID");
-        String EveName = request.getParameter("eveName");
+        String billId = request.getParameter("billId");
+        String username = request.getParameter("usernames");
+        String billName = request.getParameter("billName");
         String EventDate = request.getParameter("eventDate");
         String ProfileId = request.getParameter("profileId");
-        String QrGen = EveId + " " + EveName + " " + EventDate + " " + ProfileId + " PASS";
+        System.out.println(billId);
+        String QrGen = username + " " + billName + " " + EventDate + " " + ProfileId + " Payment Success";
+        
+
         try {
-            Thread.sleep(5000);
             CreateQr crQr = new CreateQr(QrGen);
-            boolean results = crQr.isRealesed(Integer.parseInt(ProfileId), Integer.parseInt(EveId));
+            boolean results = crQr.isRealesed(Integer.parseInt(ProfileId), Integer.parseInt(billId));
             if (results == true) {
                 Thread.sleep(1000);
-                crQr.imageDataGet(Integer.parseInt(ProfileId), Integer.parseInt(EveId));
+                crQr.imageDataGet(Integer.parseInt(ProfileId), Integer.parseInt(billId));
 
                 Thread.sleep(2000);
                 request.getRequestDispatcher("QrTicketView.jsp").forward(request, response);
             } else {
                 crQr.createQr();
                 Thread.sleep(1000);
-                boolean result = crQr.SaveQrCode(Integer.parseInt(ProfileId), Integer.parseInt(EveId));
+                boolean result = crQr.SaveQrCode(Integer.parseInt(ProfileId), Integer.parseInt(billId));
 
                 Thread.sleep(2000);
                 response.sendRedirect("QrTicketView.jsp");
